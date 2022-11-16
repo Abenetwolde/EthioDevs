@@ -1,5 +1,32 @@
 import { makeStyles } from '@material-ui/core/styles';
-
+export const CarasouleImageStyles = makeStyles(
+  (theme) => ({
+    imageWrapper:{
+      marginTop:'20px',
+   
+      width:'100vW',
+      backgroundColor:'blue',
+     
+   
+    
+    },
+//     image:{
+      
+// height:'10px',
+// width:'10%',
+// backgroundColor:'red'
+//     },
+  
+  img:{
+ 
+  
+      width:'100%',
+ height:'100px',
+ objectFit: 'cover'
+    }
+  }),
+ 
+);
 export const useMainPaperStyles = makeStyles(
   (theme) => ({
     root: {

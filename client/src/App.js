@@ -14,6 +14,7 @@ import { Paper } from '@material-ui/core/';
 import customTheme from './styles/customTheme';
 import { useMainPaperStyles } from './styles/muiStyles';
 import { ThemeProvider } from '@material-ui/core/styles';
+import CarasoleImage from './components/CarasoleImage';
 
 const App = () => {
   const classes = useMainPaperStyles();

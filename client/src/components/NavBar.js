@@ -52,7 +52,7 @@ const NavBar = () => {
                 >
                   reddish
                 </Button>
-                <Typography variant="caption" color="secondary">
+                {/* <Typography variant="caption" color="secondary">
                   Made with <FavoriteIcon style={{ fontSize: 12 }} /> by
                   <Link
                     href={'https://github.com/amand33p'}
@@ -62,7 +62,7 @@ const NavBar = () => {
                   >
                     <strong>{` amand33p`}</strong>
                   </Link>
-                </Typography>
+                </Typography> */}
               </div>
               {!isMobile && <SearchBar />}
             </div>
