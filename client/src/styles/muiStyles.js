@@ -55,6 +55,9 @@ export const useMainPaperStyles = makeStyles(
 
 export const useNavStyles = makeStyles(
   (theme) => ({
+    Appbar: {
+     backgroundColor:theme.palette.appbar.main
+    },
     leftPortion: {
       flexGrow: 1,
       display: 'flex',
@@ -94,6 +97,7 @@ export const useNavStyles = makeStyles(
       },
     },
     search: {
+      // backgroundColor:'white',
       flexGrow: 0.75,
       [theme.breakpoints.down('sm')]: {
         flexGrow: 1,
@@ -103,6 +107,10 @@ export const useNavStyles = makeStyles(
     searchBtn: {
       padding: '0.2em',
     },
+    inputField:{
+      borderRadius:'8px',
+      backgroundColor:theme.palette.inputSerach.main
+    }
   }),
   { index: 1 }
 );

@@ -36,7 +36,7 @@ const NavBar = () => {
   };
 
   return (
-    <AppBar position="sticky" color="inherit" elevation={1}>
+    <AppBar position="sticky" color="appbar" elevation={1}className={classes.Appbar}>
       <Toolbar disableGutters={isMobile}>
         {!searchOpen && (
           <>
@@ -44,13 +44,13 @@ const NavBar = () => {
               <div className={classes.logoWrapper}>
                 <Button
                   className={classes.logo}
-                  color="primary"
+                  color="appbar"
                   component={RouterLink}
                   to="/"
                   startIcon={<RedditIcon fontSize="large" />}
                   size="large"
                 >
-                  reddish
+                  መላ Mela
                 </Button>
                 {/* <Typography variant="caption" color="secondary">
                   Made with <FavoriteIcon style={{ fontSize: 12 }} /> by
@@ -69,7 +69,7 @@ const NavBar = () => {
             {isMobile ? (
               <>
                 <IconButton
-                  color="primary"
+                  color="appbar"
                   className={classes.searchBtn}
                   onClick={() => setSearchOpen((prevState) => !prevState)}
                 >
@@ -78,7 +78,7 @@ const NavBar = () => {
                 <MobileUserMenu user={user} handleLogout={handleLogout} />
               </>
             ) : (
-              <DesktopUserMenu user={user} handleLogout={handleLogout} />
+               <DesktopUserMenu user={user} handleLogout={handleLogout} />
             )}
           </>
         )}
