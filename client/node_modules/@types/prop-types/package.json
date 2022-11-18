@@ -1,7 +1,8 @@
 {
     "name": "@types/prop-types",
-    "version": "15.7.3",
+    "version": "15.7.5",
     "description": "TypeScript definitions for prop-types",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/prop-types",
     "license": "MIT",
     "contributors": [
         {
@@ -21,7 +22,7 @@
         }
     ],
     "main": "",
-    "types": "index",
+    "types": "index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
@@ -29,6 +30,6 @@
     },
     "scripts": {},
     "dependencies": {},
-    "typesPublisherContentHash": "09cbaa49bc0d7139a168388028da20f8772c641a1e83848ef2cdcd0f91c7ee79",
-    "typeScriptVersion": "2.8"
+    "typesPublisherContentHash": "771faec3cc5b1aa1cefc03c5dd3668980da8a0c59785867e473d6d7baea31a8a",
+    "typeScriptVersion": "3.9"
 }

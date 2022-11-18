@@ -5,7 +5,8 @@ import { toggleDarkMode } from '../reducers/themeReducer';
 import { MenuItem, ListItemIcon, IconButton } from '@material-ui/core';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
-
+import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
+import Brightness2Icon from '@material-ui/icons/Brightness2';
 const DarkModeMenuItem = ({ closeMenu, navItem }) => {
   const { darkMode } = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -17,8 +18,8 @@ const DarkModeMenuItem = ({ closeMenu, navItem }) => {
 
   if (navItem) {
     return (
-      <IconButton color="primary" onClick={handleDarkMode}>
-        {darkMode ? <Brightness4Icon /> : <Brightness7Icon />}
+      <IconButton color="inputSerach" onClick={handleDarkMode}>
+        {darkMode ? <Brightness2Icon /> : <EmojiObjectsIcon />}
       </IconButton>
     );
   }
@@ -27,9 +28,9 @@ const DarkModeMenuItem = ({ closeMenu, navItem }) => {
     <MenuItem onClick={handleDarkMode}>
       <ListItemIcon>
         {darkMode ? (
-          <Brightness4Icon style={{ marginRight: 7 }} />
+          <EmojiObjectsIcon style={{ marginRight: 7 }} />
         ) : (
-          <Brightness7Icon style={{ marginRight: 7 }} />
+          <EmojiObjectsIcon style={{ marginRight: 7 }} />
         )}
         Dark Mode: {darkMode ? ' ON' : ' OFF'}
       </ListItemIcon>

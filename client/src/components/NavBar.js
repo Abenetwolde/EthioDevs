@@ -21,14 +21,18 @@ import { useTheme } from '@material-ui/core/styles';
 import RedditIcon from '@material-ui/icons/Reddit';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import SearchIcon from '@material-ui/icons/Search';
-
+import DarkModeMenuItem from './DarkModeMenuItem';
 const NavBar = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('xs'));
   const classes = useNavStyles();
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleLogout = () => {
     dispatch(logoutUser());
@@ -65,6 +69,7 @@ const NavBar = () => {
                 </Typography> */}
               </div>
               {!isMobile && <SearchBar />}
+             
             </div>
             {isMobile ? (
               <>

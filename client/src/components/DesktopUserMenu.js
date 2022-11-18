@@ -41,7 +41,8 @@ const DesktopUserMenu = ({ user, handleLogout }) => {
   const loggedUser = storageService.loadUser() || user;
 
   return (
-    <div>
+    <div style={{display:"flex"}}>
+       <DarkModeMenuItem closeMenu={handleClose} navItem={true} />
       {loggedUser ? (
         <>
           <Button onClick={handleMenu} className={classes.userBtn}>
@@ -109,7 +110,7 @@ const DesktopUserMenu = ({ user, handleLogout }) => {
       ) : (
         <div className={classes.navItems}>
           <AuthFormModal />
-          <DarkModeMenuItem closeMenu={handleClose} navItem={true} />
+          {/* <DarkModeMenuItem closeMenu={handleClose} navItem={true} /> */}
         </div>
       )}
     </div>
