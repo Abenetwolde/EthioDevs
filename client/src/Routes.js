@@ -23,12 +23,13 @@ const Routes = () => {
     <Switch>
       <Route exact path="/">
         <Container disableGutters className={classes.homepage}>
+        <TopSubsPanel />
           <div className={classes.postsPanel}>
            {!isMobile&&<CarasoleImage/>} 
             <PostFormModal />
             <PostList />
           </div>
-          <TopSubsPanel />
+          
         </Container>
       </Route>
       <Route exact path="/comments/:id">

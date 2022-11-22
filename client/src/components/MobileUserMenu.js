@@ -41,7 +41,7 @@ const MobileUserMenu = ({ user, handleLogout }) => {
 
   return (
     <div>
-       <DarkModeMenuItem  closeMenu={handleClose} />
+       <DarkModeMenuItem  closeMenu={handleClose} navItem/>
       {loggedUser ? (
         <IconButton onClick={handleMenu} className={classes.userBtnMob}>
           {loggedUser?.avatar?.exists ? (
