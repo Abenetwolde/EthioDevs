@@ -38,6 +38,30 @@ function PaymentScreen() {
     price: 500.0,
     img: "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png",
     amount: 0,
+  }, {
+    id: 3,
+    title: "Foriener Tickcet",
+    price: 500.0,
+    img: "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png",
+    amount: 0,
+  }, {
+    id: 3,
+    title: "Foriener Tickcet",
+    price: 500.0,
+    img: "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png",
+    amount: 0,
+  }, {
+    id: 3,
+    title: "Foriener Tickcet",
+    price: 500.0,
+    img: "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png",
+    amount: 0,
+  }, {
+    id: 3,
+    title: "Foriener Tickcet",
+    price: 500.0,
+    img: "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png",
+    amount: 0,
   },])
   /*  , */
   const [visible, setVisible] = useState(false);

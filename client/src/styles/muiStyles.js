@@ -757,7 +757,7 @@ export const useSubPanelStyles = makeStyles(
     mainPaper: {
       minWidth: '25%',
       borderRadius: 0,
-      marginLeft: '0.5em',
+      // marginLeft: '0.1em',
       padding: '0.5em',
     },
     listPaper: {

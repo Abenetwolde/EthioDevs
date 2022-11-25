@@ -92,6 +92,16 @@ const TopSubsPanel = () => {
                     ) : (
                       <AddIcon />
                     )
+                    <Button
+                    variant="outlined"
+                    color="primary"
+                    size="small"
+                    startIcon={
+                      isSubscribed(s.subscribedBy, user) ? (
+                        <CheckIcon />
+                      ) : (
+                        <AddIcon />
+          
                   }
                   onClick={() =>
                     handleJoinSub(s.id, s.subscribedBy, s.subredditName)
