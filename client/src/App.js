@@ -9,7 +9,7 @@ import NavBar from './components/NavBar';
 import ToastNotif from './components/ToastNotif';
 import Routes from './Routes';
 import getErrorMsg from './utils/getErrorMsg';
-
+import './i18n';
 import { Paper } from '@material-ui/core/';
 import customTheme from './styles/customTheme';
 import { useMainPaperStyles } from './styles/muiStyles';

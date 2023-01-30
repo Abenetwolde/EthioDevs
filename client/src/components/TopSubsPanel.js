@@ -7,7 +7,7 @@ import SubFormModal from './SubFormModal';
 import LoadingSpinner from './LoadingSpinner';
 import getErrorMsg from '../utils/getErrorMsg';
 import storageService from '../utils/localStorage';
-
+import { useTranslation } from "react-i18next";
 import {
   Paper,
   Typography,
@@ -23,7 +23,7 @@ import AddIcon from '@material-ui/icons/Add';
 import CheckIcon from '@material-ui/icons/Check';
 import { getCircularAvatar } from '../utils/cloudinaryTransform';
 const TopSubsPanel = () => {
-
+  const { t } = useTranslation();
   const { subs, user } = useSelector((state) => state);
   console.log("Top subs"+subs);
   const dispatch = useDispatch();
@@ -67,7 +67,7 @@ console.log(subs);
     <Paper variant="outlined" className={classes.mainPaper}>
       <Paper variant="outlined" className={classes.listPaper}>
         <Typography variant="h5" color="secondary" className={classes.title}>
-         Top Groups
+        { t('plan_text') }{2+2}
         </Typography>
         {loadingSubs ? (
           <LoadingSpinner text="Fetching subs data..." />
@@ -163,7 +163,7 @@ console.log(subs);
         )}
       </Paper>
 
-      {loggedUser.Admin &&  <SubFormModal />}
+      {loggedUser?.Admin &&  <SubFormModal />}
     </Paper>
   );
 };

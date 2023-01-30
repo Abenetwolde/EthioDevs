@@ -69,7 +69,7 @@ const NavBar = () => {
                 </Typography> */}
               </div>
               {!isMobile && <SearchBar />}
-             
+
             </div>
             {isMobile ? (
               <>
@@ -83,6 +83,7 @@ const NavBar = () => {
                 <MobileUserMenu user={user} handleLogout={handleLogout} />
               </>
             ) : (
+              
                <DesktopUserMenu user={user} handleLogout={handleLogout} />
             )}
           </>

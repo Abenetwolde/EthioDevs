@@ -6,7 +6,7 @@ import UpdateAvatarModal from './UpdateAvatarModal';
 import DarkModeMenuItem from './DarkModeMenuItem';
 import { getCircularAvatar } from '../utils/cloudinaryTransform';
 import storageService from '../utils/localStorage';
-
+import { useTranslation } from "react-i18next";
 import {
   Button,
   Menu,
@@ -37,12 +37,20 @@ const DesktopUserMenu = ({ user, handleLogout }) => {
     handleClose();
     handleLogout();
   };
+  const { i18n } = useTranslation();
 
+  const handleLanguage = (e) => {
+      i18n.changeLanguage(e.target.value);
+  }
   const loggedUser = storageService.loadUser() || user;
 
   return (
     <div style={{display:"flex"}}>
        <DarkModeMenuItem closeMenu={handleClose} navItem={true} />
+       <select onClick={handleLanguage}>
+                            <option value="en">English</option>
+                            <option value="fr">French</option>
+                        </select>
       {loggedUser ? (
         <>
           <Button onClick={handleMenu} className={classes.userBtn}>
