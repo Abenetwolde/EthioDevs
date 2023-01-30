@@ -28,7 +28,10 @@
     "redux-thunk": "^2.3.0",
     "timeago-react": "^3.0.2",
     "typeface-varela-round": "0.0.71",
-    "yup": "^0.29.3"
+    "yup": "^0.29.3",
+    "i18next": "^21.6.5",
+    "i18next-browser-languagedetector": "^6.1.2",
+    "react-i18next": "^11.15.3"
   },
   "scripts": {
     "start": "react-scripts start",
