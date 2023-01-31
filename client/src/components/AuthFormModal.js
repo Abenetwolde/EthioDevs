@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import AuthForm from './AuthForm';
 
 import { DialogTitle } from './CustomDialogTitle';
+import AddIcon from '@material-ui/icons/Add';
 import {
   Dialog,
   DialogContent,
@@ -39,9 +40,9 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
     closeMobileMenu();
   };
 
+
   return (
     <div>
-      
       {type === 'upvote' ? (
         <IconButton
           onClick={handleClickOpen}
@@ -49,14 +50,28 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
         >
           <ArrowUpwardIcon style={{ color: '#b2b2b2' }} />
         </IconButton>
-      ) : type === 'downvote' ? (
+      ): type==='Join'?( <Button
+        variant="outlined"
+        color="primary"
+        size="small"
+        startIcon={
+
+            <AddIcon />
+          }
+
+          onClick={handleClickOpen}
+    >
+     Join
+    </Button>):
+       type === 'downvote' ? (
         <IconButton
           onClick={handleClickOpen}
           fontSize={isMobile ? 'small' : 'medium'}
         >
           <ArrowDownwardIcon style={{ color: '#b2b2b2' }} />
         </IconButton>
-      ) : isMobile ? (
+      ) :
+     isMobile ? (
         <MenuItem onClick={handleMobileMenu}>
           <ListItemIcon>
             <ExitToAppIcon style={{ marginRight: 7 }} />
@@ -72,6 +87,10 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
           Login/Register
         </Button>
       )}
+
+
+
+
 
       <Dialog
         open={open}

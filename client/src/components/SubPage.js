@@ -96,8 +96,11 @@ const SubPage = () => {
     admin,
     createdAt,
     id,
+    imageLink
   } = subPage.subDetails;
-
+  console.log(subPage.subDetails.imageSubmission?.imageLink
+    );
+    const image= subPage.subDetails.imageSubmission?.imageLink;
   const isSubscribed = user && subscribedBy.includes(user.id);
 
   const handleSubJoin = async () => {
@@ -161,8 +164,10 @@ const SubPage = () => {
 
   return (
     <Container disableGutters>
-      <Paper variant="outlined" className={classes.mainPaper}>
-        <Paper variant="outlined" className={classes.subInfoWrapper}>
+      <Paper variant="outlined" className={classes.mainPaper} >
+        <Paper variant="outlined" className={classes.subInfoWrapper} style={{ backgroundImage:`url(${image})`,  backgroundSize: 'cover',
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',}}>
           <div className={classes.firstPanel}>
             <Typography variant="h6" color="secondary">
               r/{subredditName}

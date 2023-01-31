@@ -6,6 +6,7 @@ import { useNavStyles } from '../styles/muiStyles';
 import SearchIcon from '@material-ui/icons/Search';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
+
 const SearchBar = ({ isMobile, setSearchOpen }) => {
   const [searchInput, setSearchInput] = useState('');
   const history = useHistory();
@@ -14,9 +15,16 @@ const SearchBar = ({ isMobile, setSearchOpen }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchInput === '') return;
+
     history.push(`/search/${searchInput}`);
   };
+  const handela = (s) => {
+if(s===''){
+  return;
+}
 
+    history.push(`/search/${s}`);
+  };
   const clearSearch = () => {
     if (isMobile) {
       setSearchOpen(false);
@@ -27,11 +35,11 @@ const SearchBar = ({ isMobile, setSearchOpen }) => {
   return (
     <div className={classes.search}>
       <form onSubmit={handleSearch}>
-        <TextField 
+        <TextField
           type="search"
           placeholder="Search for posts…"
           value={searchInput}
-          onChange={(e) => setSearchInput(e.target.value)}
+          onChange={(e) => setSearchInput(handela(e.target.value))}
           className={classes.inputField}
           variant="outlined"
           margin="dense"
