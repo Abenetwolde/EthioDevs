@@ -8,6 +8,7 @@ import LoadingSpinner from './LoadingSpinner';
 import getErrorMsg from '../utils/getErrorMsg';
 import storageService from '../utils/localStorage';
 import { useTranslation } from "react-i18next";
+import AuthFormModal from './AuthFormModal';
 import {
   Paper,
   Typography,
@@ -40,7 +41,7 @@ console.log(subs);
   const loadingSubs = !subs || !subs.topSubs;
 
   const isSubscribed = (subscribedBy, user) => {
-    return subscribedBy.includes(user.id);
+    return subscribedBy.includes(user?.id);
   };
 
   const handleJoinSub = async (id, subscribedBy, subredditName) => {
@@ -135,25 +136,28 @@ console.log(subs);
                </div>
 
 
-               {loggedUser && (
+               {/* {loggedUser && ( */}
+           {loggedUser ?
                  <Button
                    variant="outlined"
                    color="primary"
                    size="small"
                    startIcon={
-                     isSubscribed(s.subscribedBy, user) ? (
+                     isSubscribed(s?.subscribedBy, user) ? (
                        <CheckIcon />
                      ) : (
                        <AddIcon />
                      )}
 
                  onClick={() =>
-                   handleJoinSub(s.id, s.subscribedBy, s.subredditName)
+                   handleJoinSub(s?.id, s?.subscribedBy, s?.subredditName)
                  }
                >
-                 {isSubscribed(s.subscribedBy, user) ? 'Joined' : 'Join'}
+                 {isSubscribed(s?.subscribedBy, user) ? 'Joined' : 'Join'}
                </Button>
-              )} </div>
+              :<AuthFormModal type="Join" /> }
+              {/* )} */}
+              </div>
 
            </div>
            <Divider light />

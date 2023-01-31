@@ -41,6 +41,7 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
 
   return (
     <div>
+      
       {type === 'upvote' ? (
         <IconButton
           onClick={handleClickOpen}
@@ -71,6 +72,7 @@ const AuthFormModal = ({ closeMobileMenu, type }) => {
           Login/Register
         </Button>
       )}
+
       <Dialog
         open={open}
         onClose={handleClose}
