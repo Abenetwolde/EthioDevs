@@ -15,7 +15,7 @@ const SearchBar = ({ isMobile, setSearchOpen }) => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchInput === '') return;
-
+//automatic
     history.push(`/search/${searchInput}`);
   };
   const handela = (s) => {
